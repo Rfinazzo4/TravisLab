@@ -23,9 +23,9 @@ public class TravisLab{
         Predicate<String> strfirst = r->r.contains("Ryan");
         Predicate<String> strsecond = b->b.contains("Bob");
         
-        int index = linearSearch(strList,strfirst);
+        //int index = linearSearch(strList,strfirst);
        
-        index = linearSearch(strList,strsecond);
+        //index = linearSearch(strList,strsecond);
         
         
         List<Integer> intList=new ArrayList<>();
@@ -37,11 +37,11 @@ public class TravisLab{
         Predicate<Integer> intsecond = (i)->i>1;
         Predicate<Integer> fail = (i)->i<0;
         
-        index = linearSearch(intList,intfirst);
+        //index = linearSearch(intList,intfirst);
       
-        index = linearSearch(intList,intsecond);
+        //index = linearSearch(intList,intsecond);
         
-        index = linearSearch(intList,fail);
+        int index = linearSearch(intList,fail);
         
     }
     
