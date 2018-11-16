@@ -14,12 +14,7 @@ public class TravisLab{
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-            
-        
-        
-        
-        System.out.println("Hello World");
+
         List<String> strList=new ArrayList<>();
         strList.add("Ryan");
         strList.add("Bob");
@@ -29,9 +24,9 @@ public class TravisLab{
         Predicate<String> strsecond = b->b.contains("Bob");
         
         int index = linearSearch(strList,strfirst);
-        System.out.println(index);
+       
         index = linearSearch(strList,strsecond);
-        System.out.println(index);
+        
         
         List<Integer> intList=new ArrayList<>();
         intList.add(1);
@@ -40,19 +35,19 @@ public class TravisLab{
         
         Predicate<Integer> intfirst = (i) ->i<2 &&i>0;
         Predicate<Integer> intsecond = (i)->i>1;
+        Predicate<Integer> fail = (i)->i<0;
         
         index = linearSearch(intList,intfirst);
-        System.out.println(index);
+      
         index = linearSearch(intList,intsecond);
-        System.out.println(index);
+        
+        index = linearSearch(intList,fail);
+        
     }
     
     public static <T> int linearSearch(List<T> list, Predicate<T> check){
-        System.out.println("here");
         for (int i =0;i<list.size();i++){
-            System.out.println("Here1");
             if (check.test(list.get(i))){
-                System.out.println("Here2");
                 return i;
             }
         }
