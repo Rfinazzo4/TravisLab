@@ -8,7 +8,7 @@ import java.util.function.Predicate;
  *
  * @author Ryanfinazzo
  */
-public class TravisLab{
+public class TravisLab implements Predicate{
 
     /**
      * @param args the command line arguments
@@ -52,5 +52,10 @@ public class TravisLab{
             }
         }
         return -1; 
+    }
+
+    @Override
+    public boolean test(Object t) {
+    return false;
     }
 }
